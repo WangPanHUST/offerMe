@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @date 2019/3/9 19:56
  * @description -1,2，-3,4，-5...... 给出起点和终点，问着中间的数值的和是多少 （腾讯提前批2题）
  **/
-public class wangzherongyao {
+public class Tencent2 {
 
     public static void print(int[][] index,int len){
         int start = 0,end = 0;

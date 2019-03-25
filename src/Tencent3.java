@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @date 2019/3/9 20:25
  * @description 给出得分和总局数，求方案种类，对1e9 + 7 取余，快速幂算法和取余防止溢出
  **/
-public class pukepai {
+public class Tencent3 {
 
     public static long sum(int num, int score){
         long result = 1;

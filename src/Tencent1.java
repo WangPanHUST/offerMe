@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @date 2019/3/9 19:36
  * @description 有1-n，n种面值的货币且数量不限，问给出金钱，货币最少的数量是多少 （腾讯提前批1题）
  **/
-public class niujiacun {
+public class Tencent1 {
 
     public static int num(int money,int total){
         if(total == 0)
