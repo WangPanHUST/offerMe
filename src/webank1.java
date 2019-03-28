@@ -10,7 +10,7 @@ public class webank1 {
     public static String result(int n){
         int rows = rows(n);
         //最后一个对角线含有的元素个数
-        int left = n - (rows -1) * rows / 2;
+        int left = n - (rows - 1) * rows / 2;
         int col = 0;
         int row = 0;
 
@@ -19,7 +19,7 @@ public class webank1 {
             row = rows + 1 - col;
         }else{
             row = left;
-            col = rows +1 - row;
+            col = rows + 1 - row;
         }
         return row + "/" + col;
     }
