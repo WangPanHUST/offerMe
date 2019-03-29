@@ -11,11 +11,6 @@ import java.util.Stack;
  **/
 public class printList {
 
-    public class ListNode{
-        int val;
-        ListNode next = null;
-    }
-
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode){
 
         //这里即使listNode为null，输出也该为[]，而不是null

@@ -7,11 +7,6 @@
  **/
 public class kthToTail {
 
-    public class ListNode{
-        int val;
-        ListNode next = null;
-    }
-
     public ListNode FindKthToTail(ListNode head,int k) {
         if(head == null || k <= 0)
             return null;

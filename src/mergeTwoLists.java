@@ -5,14 +5,6 @@
  * 递归版本更简单，递归思想！！！
  **/
 public class mergeTwoLists {
-    public class ListNode {
-        int val;
-        ListNode next = null;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
 
     public ListNode Merge(ListNode list1,ListNode list2) {
         if(list1 == null)

@@ -5,10 +5,6 @@
  * 反转之前先保存当前节点，及保存了后续的所有节点 顺序遍历一次即可
  **/
 public class reverseList {
-    public class ListNode{
-        int val;
-        ListNode next = null;
-    }
 
     public ListNode ReverseList(ListNode head) {
         if(head == null)
