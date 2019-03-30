@@ -34,7 +34,7 @@ public class getNextNode {
                     return pNode.next;
                 pNode = pNode.next;
             }
-            System.out.println(pNode.val);
+            //System.out.println(pNode.val);
             return null;
         }
 
@@ -61,6 +61,7 @@ public class getNextNode {
         treeLinkNode1.next = treeLinkNode;
         treeLinkNode2.next = treeLinkNode1;
         TreeLinkNode a = GetNext(treeLinkNode2);
-
+        if(a != null)
+            System.out.println(a.val);
     }
 }
