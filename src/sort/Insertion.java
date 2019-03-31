@@ -6,7 +6,8 @@ import edu.princeton.cs.algs4.StdRandom;
 /**
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/1 20:52
- * @description 插入排序，索引i左侧的元素总是有序的
+ * @description 插入排序，索引i左侧的元素总是有序的，即将索引为i的元素插入到左边i-1个元素中合适的位置，内循环从右向左开始判断，
+ * 只用当右侧小与左侧时，才发生交换，故时间复杂度最坏o(n2)，最好时候只需外循环，为o(n)
  **/
 public class Insertion {
 

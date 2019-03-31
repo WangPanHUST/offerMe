@@ -6,13 +6,14 @@ import edu.princeton.cs.algs4.StdRandom;
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/11 21:32
  * @description 堆排序，堆排序N个元素，只需少于 2NlgN + 2N 次比较
+ * 首先将元素构造为大顶堆，即每个根节点都比叶子节点大，从最后一个非叶子节点开始，依次判断该节点是否符合
  **/
 public class Heap {
 
     public static void sort(Comparable[] a){
         int N = a.length;
 
-        //对每个根节点进行sink，根节点的开始即是 N/2
+        //对每个非叶子节点进行sink构造大顶堆，最后一个非叶子节点即是 N/2
         for(int k = N/2;k >= 1;k--){
             sink(a,k,N);
         }

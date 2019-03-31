@@ -6,6 +6,7 @@ import sort.Insertion;
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/13 13:12
  * @description 冒泡排序每次交换相邻的一对元素，一趟排序将最大的数交换的到队尾
+ * 时间复杂度：o(n2)，可以设置标志位当没发生交换时候跳出外层循环，一定程度上可以降低复杂度。
  **/
 public class Bubble {
 

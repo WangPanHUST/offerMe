@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.StdRandom;
 /**
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/12 14:38
- * @description 归并排序
+ * @description 归并排序，使用了辅助数组，空间复杂度增加为o(n)，时间复杂度为o(nlgn)，且时间复杂度稳定，对每一层的元素进行归并都需要n的时间复杂度，有lgn层
  **/
 public class Merge {
 

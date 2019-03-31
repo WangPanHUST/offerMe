@@ -7,7 +7,7 @@ import edu.princeton.cs.algs4.StdRandom;
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/1 21:30
  * @description 选择排序，将全部元素从左向右依次与右边所有元素比较，依次把最小的元素放到对应的位置
- * 选择排序是冒泡排序的倒置版本，每次遍历保证索引为i的位置上是第i+1小的数
+ * 选择排序是冒泡排序的倒置版本，每次遍历保证索引为i的位置上是第i+1小的数，时间复杂度o(n2)
  **/
 public class Selection {
 

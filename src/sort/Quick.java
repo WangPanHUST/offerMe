@@ -5,7 +5,8 @@ import edu.princeton.cs.algs4.StdRandom;
 /**
  * @author WangPan wangpanhust@qq.com
  * @date 2019/1/8 21:43
- * @description 快速排序
+ * @description 快速排序，利用递归每次查找哨兵的位置，将哨兵两侧的元素递归排序
+ * 时间复杂度：最好o(nlgn)，平均o(1.39nlgn)，最坏o(n2)
  **/
 public class Quick {
 
