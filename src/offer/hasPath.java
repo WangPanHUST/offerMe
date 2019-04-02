@@ -40,8 +40,10 @@ public class hasPath {
                     path(matrix,m + colNumber,str,s,isVisited) ||
                     path(matrix,m - colNumber,str,s,isVisited);
 
+            //回溯的关键，如果其周围四个节点都不符合，则判断到str的位置回退，但是访问位置false，表示以后还可能访问到这里
             if(!hasP){
                 s--;
+                //只要访问位为false，则在循环中就仍然有机会被访问到
                 isVisited[m] = false;
             }
         }
