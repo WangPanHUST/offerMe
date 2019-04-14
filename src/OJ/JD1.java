@@ -36,6 +36,7 @@ public class JD1 {
 
     public static int getCount(int[][] tree,boolean[] modified){
         int count = 0;
+        //数组的复制要用Arrays.copyOf，直接等于还是原来的引用
         int[][] temp = new int[tree.length][2];
         for (int i = 0; i < tree.length; i++)
             temp[i] = Arrays.copyOf(tree[i],2);

@@ -62,6 +62,7 @@ public class byteDance4 {
             p[start] = p[i];
             p[i] = temp;
 
+            //数组的的复制
             Integer[] t = Arrays.copyOf(p,p.length);
             hashSet.add(t);
 
