@@ -1,4 +1,5 @@
 package sort;
+
 import edu.princeton.cs.algs4.StdRandom;
 import sort.Insertion;
 
