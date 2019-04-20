@@ -6,6 +6,7 @@
 
 ## 目录
  - [OJ](https://github.com/WangPanHUST/offerMe/tree/master/src/OJ)：部分公司的笔试题目。
+ - [binaryTree](https://github.com/WangPanHUST/offerMe/tree/master/src/binaryTree)：有关二叉树的常用算法（循环遍历等）。
  - [offer](https://github.com/WangPanHUST/offerMe/tree/master/src/offer)：剑指offer的题目代码。
  - [sort](https://github.com/WangPanHUST/offerMe/tree/master/src/sort)：经典的排序算法代码。
  
