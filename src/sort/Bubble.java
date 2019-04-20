@@ -32,6 +32,11 @@ public class Bubble {
         }
         Insertion.show(a);
         sort(a);
+        try {
+            Thread.sleep(100000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Insertion.show(a);
     }
 }

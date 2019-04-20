@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 思路：先排序，看0的个数是否大于空缺的个数，且不能出现对子
  * 当n较小时候，利用辅助哈希数组存储每个数字出现的个数，之后对原数组重新装填，完成排序，时间复杂度o(n)
  **/
-public class isContinuousCars {
+public class isContinuousCards {
     public static boolean isContinuous(int [] numbers) {
         if(numbers == null || numbers.length != 5)
             return false;
