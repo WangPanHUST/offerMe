@@ -18,7 +18,7 @@ public class preorder {
         while (!stack.isEmpty()){
             TreeNode temp = stack.pop();
             System.out.println(temp.val);
-            //每出栈一个一次把右左子点入栈
+            //每出栈一个依次把右左子点入栈
             if(temp.right != null)
                 stack.push(temp.right);
             if(temp.left != null)

@@ -1,6 +1,8 @@
 package binaryTree;
 
+import java.util.ArrayList;
 import java.util.Stack;
+
 import offer.TreeNode;
 
 /**
@@ -17,6 +19,7 @@ public class postorder {
         //stack1用来保存那些暂时不输出的根节点
         Stack<TreeNode> stack1 = new Stack<>();
         stack.push(root);
+        System.out.println("postorder output:");
         while (!stack.isEmpty()){
             while (root.left != null){
                 stack.push(root.left);
@@ -26,10 +29,10 @@ public class postorder {
             TreeNode temp = stack.peek();
             //右节点为null时这个节点可以输出，无论其是左节点还是右节点
             if(temp.right == null){
-                System.out.println(stack.pop().val);
+                System.out.print(stack.pop().val + " ");
                 //当temp是右节点时候要把根节点也输出，输出的条件是两个栈的栈顶元素相同
                 while(!stack1.isEmpty() && stack.peek() == stack1.peek()){
-                    System.out.println(stack1.pop().val);
+                    System.out.print(stack1.pop().val + " ");
                     stack.pop();
                 }
             } else {
@@ -38,6 +41,7 @@ public class postorder {
                 stack.push(root);
             }
         }
+
     }
 
     public static void main(String[] args) {

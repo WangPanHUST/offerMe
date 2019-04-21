@@ -23,7 +23,7 @@ public class inorder {
             }
             TreeNode temp = stack.pop();
             System.out.println(temp.val);
-            //出栈节点的右节点如果不是null则要进栈
+            //出栈节点的右节点如果不是null则要进栈，对其右子树进行中序遍历
             if(temp.right != null){
                 root = temp.right;
                 stack.push(root);

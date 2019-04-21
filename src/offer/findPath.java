@@ -3,6 +3,7 @@ package offer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Stack;
 
 /**
  * @author WangPan wangpanhust@qq.com
@@ -19,6 +20,41 @@ public class findPath {
 
         ArrayList<Integer> arrayList = new ArrayList<>();
         result = path(root,target,0,arrayList,result);
+        return result;
+    }
+
+    //循环版本的查找，前序遍历
+    public static ArrayList<ArrayList<Integer>> FindPathWhile(TreeNode root,int target){
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        int sum = 0;
+        TreeNode last = null;
+
+        while (root != null || !stack.isEmpty()){
+            //当前节点不为null时，将其left路径依次入栈
+            if(root != null){
+                stack.push(root);
+                sum += root.val;
+                arrayList.add(root.val);
+                if(sum == target && root.left == null && root.right == null)
+                    result .add(new ArrayList<>(arrayList));//new一个新对象
+                root = root.left;
+            }else{
+                TreeNode temp = stack.peek();
+                if(temp.right != null && temp.right != last)
+                    root = temp.right;
+                else {
+                    //这里pop操作时，root仍然是null，即一直在让stack出栈，没管root
+                    //else的情况包括右子树为null，或者右子树已经遍历过的情况
+                    last = temp;
+                    stack.pop();
+                    sum -= temp.val;
+                    arrayList.remove(arrayList.size() - 1);
+                }
+            }
+        }
         return result;
     }
 
