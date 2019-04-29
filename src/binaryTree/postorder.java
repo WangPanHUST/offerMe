@@ -12,7 +12,7 @@ import offer.TreeNode;
  **/
 public class postorder {
 
-    public static void post(TreeNode root){
+    public static void postTwoStack(TreeNode root){
         if(root == null)
             return;
         Stack<TreeNode> stack = new Stack<>();
@@ -43,6 +43,28 @@ public class postorder {
         }
 
     }
+    //使用一个栈来访问，思路与前序遍历相似，前序遍历时根节点直接输出，这里先判断是该节点的子节点是否输出过，如果输出过或为叶子节点
+    //则可以直接输出，否则将其右左子节点一次入栈
+    public static void postOneStack(TreeNode root){
+        if(root == null)
+            return;
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode pre = null;
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode temp = stack.peek();
+            if((temp.left == null && temp.right == null) || (pre != null && (pre == temp.left || pre == temp.right))){
+                System.out.print(stack.pop().val + " ");
+                pre = temp;
+            }else {
+                if(temp.right != null)
+                    stack.push(temp.right);
+                if(temp.left != null)
+                    stack.push(temp.left);
+            }
+        }
+    }
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -63,6 +85,7 @@ public class postorder {
         treeNode2.right = treeNode6;
         treeNode6.left = treeNode7;
         treeNode6.right = treeNode8;
-        post(root);
+        postTwoStack(root);
+        postOneStack(root);
     }
 }

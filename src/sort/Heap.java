@@ -16,9 +16,12 @@ public class Heap {
     public static void sort(Comparable[] a){
         int N = a.length - 1;
 
-        //对每个非叶子节点进行sink构造大顶堆，最后一个非叶子节点即是 N/2
-        for(int k = N / 2 - 1;k >= 0;k--)
+        //对每个非叶子节点进行sink构造大顶堆，最后一个非叶子节点即是 N/2 - 1
+        for(int k = N / 2;k >= 0;k--){
+            System.out.println(k);
             sink(a,k,N);
+        }
+
 
         while (N > 0){
             //将最小值交换至末尾
