@@ -1,3 +1,4 @@
+
 package offer;
 
 /**
@@ -49,7 +50,7 @@ public class SeriAndDeseri {
             root.right = deserialize(str);
         }
 
-       return root;
+        return root;
     }
 
     public static void main(String[] args) {
