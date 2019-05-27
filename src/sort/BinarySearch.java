@@ -10,25 +10,28 @@ public class BinarySearch {
         int start = 0,end = arr.length - 1;
         int mid = 0;
 
-        if(start > end || key < arr[start] | key > arr[end])
+        if(start > end || key < arr[start] | key > arr[end]) {
             return -1;
+        }
 
         while (start <= end){
             mid = (start + end) / 2;
-            if(key > arr[mid])
+            if(key > arr[mid]) {
                 start = mid + 1;
-            else if(key < arr[mid])
+            } else if(key < arr[mid]) {
                 end = mid - 1;
-            else
+            } else {
                 return mid;
+            }
         }
         return -1;
     }
 
     public static void main(String[] args) {
         int[] arr = new int[10];
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             arr[i] = i + 1;
+        }
 
         System.out.println(binarySearch(arr,2));
     }

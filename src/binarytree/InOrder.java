@@ -6,7 +6,7 @@ import offer.TreeNode;
 /**
  * @author WangPan wangpanhust@qq.com
  * @date 2019/4/20 19:08
- * @description 二叉树的中序遍历，循环版本
+ * @description 二叉树的中序遍历，非递归版本
  **/
 public class InOrder {
 

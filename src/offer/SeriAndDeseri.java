@@ -5,11 +5,13 @@ package offer;
  * @author WangPan wangpanhust@qq.com
  * @date 2019/3/1 20:34
  * @description 请实现两个函数，分别用来序列化和反序列化二叉树
+ * 序列化二叉树的时使用前序遍历的方式，对为null的左右子树添加"s"来标记，反序列化的过程仍然是一个前序遍历的过程，注意好递归的写法
  **/
 public class SeriAndDeseri {
 
     private static StringBuffer stringBuffer = new StringBuffer();
     private static int i = -1;
+    private static final String SIGN = "s";
 
     public static String serialize(TreeNode root) {
         if(root == null) {
@@ -23,11 +25,13 @@ public class SeriAndDeseri {
         if(root.left == null) {
             stringBuffer.append("s,");
         }
+        serialize(root.left);
+
         if(root.right == null) {
             stringBuffer.append("s,");
         }
-        serialize(root.left);
         serialize(root.right);
+
         return stringBuffer.toString();
     }
 
@@ -44,7 +48,7 @@ public class SeriAndDeseri {
             return root;
         }
 
-        if(!"s".equals(elements[i])) {
+        if(!SIGN.equals(elements[i])) {
             root = new TreeNode(Integer.parseInt(elements[i]));
             root.left = deserialize(str);
             root.right = deserialize(str);

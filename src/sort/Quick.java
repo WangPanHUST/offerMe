@@ -63,6 +63,7 @@ public class Quick {
 //            a[i] = StdRandom.uniform(0,N);
 //        }
         Integer[] a = {3,2,5,1,6};
+
         sort(a);
         Insertion.show(a);
     }

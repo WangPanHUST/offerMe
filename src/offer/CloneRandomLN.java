@@ -24,13 +24,6 @@ public class CloneRandomLN {
             return null;
         }
 
-//        RandomListNode nHead = new RandomListNode(0);
-//        nHead.label = pHead.label;
-//        nHead.next = pHead.next;
-//        nHead.random = pHead.random;
-//
-//        nHead.next = clone(pHead.next);
-
         RandomListNode p1 = pHead;
         while (p1 != null){
             RandomListNode nHead = new RandomListNode(p1.label);
@@ -41,22 +34,33 @@ public class CloneRandomLN {
 
         RandomListNode p2 = pHead;
         while (p2 != null){
-            if(p2.random != null) {
-                p2.next.random = p2.random;
-            }
+            p2.next.random = p2.random == null ? null : p2.random.next;
             p2 = p2.next.next;
         }
 
         RandomListNode p3 = pHead.next;
         RandomListNode result = p3;
-        pHead = pHead.next.next;
+
         while (pHead != null){
-            p3.next = pHead.next;
-            pHead = pHead.next.next;
+            pHead.next = p3.next;
+            if (p3.next != null) {
+                p3.next = p3.next.next;
+            }
+            pHead = pHead.next;
             p3 = p3.next;
         }
 
+        //不能使用如下的判断条件 p3.next != null，这样最后一组的原始节点与复制节点的next关系还在，即 3.next还是3',这个关系没有清除
+//        RandomListNode oriHead = pHead;
+//        while (p3.next != null){
+//            oriHead.next = p3.next;
+//            p3.next = p3.next.next;
+//            oriHead = oriHead.next;
+//            p3 = p3.next;
+//        }
+
         return result;
+
     }
 
     public static void main(String[] args) {
