@@ -40,7 +40,8 @@ public class FindPath {
                 sum += root.val;
                 arrayList.add(root.val);
                 if(sum == target && root.left == null && root.right == null) {
-                    result .add(new ArrayList<>(arrayList));//new一个新对象
+                    //new一个新对象
+                    result .add(new ArrayList<>(arrayList));
                 }
                 root = root.left;
             }else{
