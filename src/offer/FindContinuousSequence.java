@@ -57,6 +57,35 @@ public class FindContinuousSequence {
     }
 
     public static void main(String[] args) {
-        System.out.println( findContinuousSequence(100).toString());
+        //System.out.println(findContinuousSequence(100).toString());
+        System.out.println(findSequence(9).toString());
+    }
+
+    //指针解法
+    public static ArrayList<ArrayList<Integer>> findSequence(int sum) {
+        if(sum <= 2) {
+            return null;
+        }
+
+        ArrayList<ArrayList<Integer>> arrayLists = new ArrayList<>();
+        int low = 1, high = 2;
+        //最少含有两个数，故high <= sum / 2 + 1
+        while (high <= sum / 2 + 1) {
+            int temp = low * (high - low + 1) + (high - low) * (high - low + 1) / 2;
+            if (temp == sum) {
+                ArrayList<Integer> arrayList = new ArrayList<>();
+                for (int i = low; i <= high ; i++) {
+                    arrayList.add(i);
+                }
+                arrayLists.add(arrayList);
+                low++;
+            }else if (temp > sum) {
+                low++;
+            }else {
+                high++;
+            }
+        }
+
+        return arrayLists;
     }
 }
