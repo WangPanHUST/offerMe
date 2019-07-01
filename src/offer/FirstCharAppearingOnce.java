@@ -17,7 +17,7 @@ public class FirstCharAppearingOnce {
 
     static ArrayList<Character> arrayList = new ArrayList<>();
 
-    public static void Insert(char ch) {
+    public static void insert(char ch) {
         if (!arrayList.isEmpty() && arrayList.contains(ch)) {
             //ArrayList的remove方法有两个，直接使用remove(ch)，会将ch作为一个ascii码代表的数字，使用remove(index)方法
             arrayList.remove(new Character(ch));
@@ -36,17 +36,17 @@ public class FirstCharAppearingOnce {
     }
 
     public static void main(String[] args) {
-        Insert('g');
+        insert('g');
         System.out.print(FirstAppearingOnce());
-        Insert('o');
+        insert('o');
         System.out.print(FirstAppearingOnce());
-        Insert('o');
+        insert('o');
         System.out.print(FirstAppearingOnce());
-        Insert('g');
+        insert('g');
         System.out.print(FirstAppearingOnce());
-        Insert('l');
+        insert('l');
         System.out.print(FirstAppearingOnce());
-        Insert('e');
+        insert('e');
         System.out.print(FirstAppearingOnce());
     }
 }

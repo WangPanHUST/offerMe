@@ -1,4 +1,4 @@
-package leetcode.longestsubstring;
+package leetcode.longestsubstring2;
 
 
 import java.util.HashMap;
