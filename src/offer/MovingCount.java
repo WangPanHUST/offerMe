@@ -22,6 +22,8 @@ public class MovingCount {
             return 0;
         }
         isVisited[row][col] = true;
+        //回溯关键，该点符合，必+1，其他三个点都可以加，题目只是说 每次只能上下左右移动一格，
+        // 没说不可以往回移动，即所有符合规则的都会移动到，再加个判断是否之前移动到过
         return 1 + step(threshold,row + 1,col,isVisited)
                 + step(threshold,row - 1,col,isVisited)
                 + step(threshold,row,col + 1,isVisited)
