@@ -15,6 +15,7 @@ public class Quick3way {
     }
 
     public static void sort(Comparable[] a, int low, int high) {
+        Insertion.show(a);
         if(high <= low){
             return;
         }
@@ -38,13 +39,13 @@ public class Quick3way {
     }
 
     public static void main(String[] args) {
-        int N = Integer.parseInt(args[0]);
-        Integer[] a = new Integer[N];
-        for (int i = 0; i < N ; i++) {
-            a[i] = StdRandom.uniform(0,N);
-        }
+//        int N = Integer.parseInt(args[0]);
+//        Integer[] a = new Integer[N];
+//        for (int i = 0; i < N ; i++) {
+//            a[i] = StdRandom.uniform(0,N);
+//        }
+        Integer[] a = {3,2,5,1,6,3,3,3};
 
-        Insertion.show(a);
         sort(a);
         Insertion.show(a);
     }

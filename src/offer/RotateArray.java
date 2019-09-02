@@ -34,6 +34,7 @@ public class RotateArray {
                     return minInOrder(array,i,j);
                 }
 
+                //判断是在左侧递增数组还是右侧递增数组
                 if(array[(i+j)/2] >= array[i]) {
                     i = (i+j)/2;
                 } else if(array[(i+j)/2] <= array[j]) {

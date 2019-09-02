@@ -27,6 +27,10 @@ public class Quick {
     }
 
     public static int partitioin(Comparable[] a,int low,int high){
+        //针对low == a.length - 1的情况
+        if (low == high) {
+            return low;
+        }
         Comparable v = a[low];
         //这种比较方式没有死循环
         int i = low,j = high + 1;

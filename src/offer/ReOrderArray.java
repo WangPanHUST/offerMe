@@ -2,6 +2,7 @@ package offer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * @author WangPan wangpanhust@qq.com
